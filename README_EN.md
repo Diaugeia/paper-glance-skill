@@ -12,6 +12,19 @@ Upload any academic PDF and Claude can generate deep analysis, mindmaps, reviewe
 
 ---
 
+## 📑 Table of Contents
+
+- [Features](#-features)
+- [Quick Start](#-quick-start)
+  - [Install the Skill](#step-1-install-the-skill) ([Claude Desktop](#option-a-claude-desktop-gui-upload) · [Command Install](#option-b-claude-code--command-install) · [Manual Folder](#option-c-claude-code--manual-folder-placement))
+  - [Use it](#step-2-use-it)
+- [Feature Details](#-feature-details)
+- [File Structure](#-file-structure)
+- [FAQ](#-faq)
+- [License](#-license)
+
+---
+
 ## ✨ Features
 
 | # | Feature | Description |
@@ -30,11 +43,45 @@ Upload any academic PDF and Claude can generate deep analysis, mindmaps, reviewe
 
 ### Step 1: Install the Skill
 
-> **What is a Skill?** A Skill is an instruction bundle that adds specialized capabilities to Claude. After upload, Claude detects and uses it automatically. Currently supported in **Claude Desktop** (with login).
+> **What is a Skill?** A Skill is an instruction bundle that adds specialized capabilities to Claude. After installation, Claude detects and uses it automatically. Supported in **Claude Desktop** and **Claude Code (CLI / IDE extensions)**.
+
+#### Option A: Claude Desktop (GUI Upload)
 
 1. Click `Code -> Download ZIP`, or download from Releases.
 2. In Claude Desktop, open `Customize` -> `Skills` -> `Upload a skill`.
 3. Upload the zip file. Done ✅
+
+#### Option B: Claude Code — Command Install
+
+1. Clone or download this repository:
+   ```bash
+   git clone https://github.com/CatVinci-Studio/paper-glance-skill.git
+   ```
+2. Install the skill (choose one):
+
+   **Global install** (available in all projects):
+   ```bash
+   claude install-skill /path/to/paper-glance-skill
+   ```
+   **Project-level install** (current project only):
+   ```bash
+   claude install-skill --project /path/to/paper-glance-skill
+   ```
+
+#### Option C: Claude Code — Manual Folder Placement
+
+1. Clone or download this repository.
+2. Copy the `paper-glance-skill` folder into the Claude Code skills directory:
+
+   **Global** (available in all projects):
+   ```bash
+   cp -r paper-glance-skill ~/.claude/skills/
+   ```
+   **Project-level** (current project only):
+   ```bash
+   cp -r paper-glance-skill .claude/skills/
+   ```
+3. Restart your Claude Code session and you're good to go ✅
 
 ### Step 2: Use it
 

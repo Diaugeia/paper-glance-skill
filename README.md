@@ -12,6 +12,19 @@
 
 ---
 
+## 📑 目录
+
+- [功能一览](#-功能一览)
+- [快速开始](#-快速开始)
+  - [安装 Skill](#第一步安装-skill)（[Claude Desktop](#方式一claude-desktopgui-上传) · [Claude Code 命令安装](#方式二claude-code--命令安装) · [手动放入文件夹](#方式三claude-code--手动放入文件夹)）
+  - [开始使用](#第二步开始使用)
+- [功能详解](#-功能详解)
+- [文件结构](#-文件结构)
+- [常见问题](#-常见问题)
+- [License](#-license)
+
+---
+
 ## ✨ 功能一览
 
 | # | 功能 | 说明 | 
@@ -30,11 +43,45 @@
 
 ### 第一步：安装 Skill
 
-> **什么是 Skill？** Skill 是给 Claude 增加专项能力的指令文件夹，放到指定目录后 Claude 会自动识别和使用。目前支持 **Claude Desktop**（需登录账号）。
+> **什么是 Skill？** Skill 是给 Claude 增加专项能力的指令文件夹，安装后 Claude 会自动识别和使用。支持 **Claude Desktop** 和 **Claude Code（CLI / IDE 扩展）**。
 
-1. 点击右上角 `Code → Download ZIP`，或者在Release中下载。
-2. 在Claude Code打开`Customize`、 `Skills`中的`Upload a skill`
-3. 上传压缩包, Skill安装完成 ✅
+#### 方式一：Claude Desktop（GUI 上传）
+
+1. 点击右上角 `Code → Download ZIP`，或者在 Release 中下载。
+2. 在 Claude Desktop 打开 `Customize` → `Skills` → `Upload a skill`
+3. 上传压缩包，Skill 安装完成 ✅
+
+#### 方式二：Claude Code — 命令安装
+
+1. 克隆或下载本仓库：
+   ```bash
+   git clone https://github.com/CatVinci-Studio/paper-glance-skill.git
+   ```
+2. 安装 Skill（选择其一）：
+
+   **全局安装**（所有项目可用）：
+   ```bash
+   claude install-skill /path/to/paper-glance-skill
+   ```
+   **项目级安装**（仅当前项目可用）：
+   ```bash
+   claude install-skill --project /path/to/paper-glance-skill
+   ```
+
+#### 方式三：Claude Code — 手动放入文件夹
+
+1. 克隆或下载本仓库。
+2. 将 `paper-glance-skill` 文件夹复制到 Claude Code 的 Skills 目录：
+
+   **全局**（所有项目可用）：
+   ```bash
+   cp -r paper-glance-skill ~/.claude/skills/
+   ```
+   **项目级**（仅当前项目可用）：
+   ```bash
+   cp -r paper-glance-skill .claude/skills/
+   ```
+3. 重启 Claude Code 会话即可生效 ✅
 
 ### 第二步：开始使用
 
