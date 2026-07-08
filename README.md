@@ -1,7 +1,5 @@
 # 📄 Paper Glance
 
-> 当前项目的主要功能被迁移至 https://github.com/CatVinci-Studio/Research-Skill-Marketplace ， 对于多平台的兼容性更好并方便使用。
-
 中文说明（当前页） | English: [README_EN.md](README_EN.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
